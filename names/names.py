@@ -48,23 +48,15 @@ sorted_names2 = sorted(names_2)
 idx1 = 0
 idx2 = 0
 
-while idx1 < len(sorted_names1) or idx2 < len(sorted_names2):       
+while idx1 < len(sorted_names1) and idx2 < len(sorted_names2):       
     if sorted_names1[idx1] == sorted_names2[idx2]:
         duplicates.append(sorted_names1[idx1])
         idx1 += 1
         idx2 += 1
     elif sorted_names1[idx1] < sorted_names2[idx2]:
-        if idx1 == len(sorted_names1) - 1:
-            break 
         idx1 += 1
     elif sorted_names2[idx2] < sorted_names1[idx1]:
-        if idx2 == len(sorted_names2) - 1:
-            break 
         idx2 += 1
-
-
-    
-
 
 
 
